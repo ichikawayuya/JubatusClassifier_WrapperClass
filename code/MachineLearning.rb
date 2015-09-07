@@ -11,6 +11,6 @@ class MachineLearning
                 #@client = Jubatus::Classifier::Client::Classifier.new(host, port, name)        
         end
         def getDataConstruct(key, value)
-                return Jubatus::Common::Datum.new("#{key}" => "#{value}")
+                return Jubatus::Common::Datum.new("#{key}" => value)
         end
 end
