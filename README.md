@@ -6,9 +6,14 @@ Jubatusの多値分類のラッパークラスを作成しました．
 私もその一人で，制約でエラーに悩まされました．
 
 以下にメソッドの説明を記載します．
-
+#入力形式
+入力する形式として配列とし， 
+key_values = [[key1,value1],[key2,value2],...]
+の形式で扱うこととする．
+これによってKey-Value形式がわかりやすくなり，見直した時にわかりやすくなる．
 #Methods(Classifire.rb)
-Train(label, key, values)
+##Train(label, key_values)
+
 
 学習させるデータ（教師あり学習）を設定する．
 変数valuesは配列なので，labelとkeyを取得すれば一連の流れでセットすることが可能．
