@@ -6,11 +6,16 @@ require 'jubatus/classifier/client'
 class MachineLearning
         @client
 
-        #Jubatusサーバにつなぐ
-        def ServerConect(host, port, name)
-                @client = Jubatus::Classifier::Client::Classifier.new(host, port, name)        
+        def getDataConstruct(key_values)
+                return Jubatus::Common::Datum.new(key_values)
         end
-        def getDataConstruct(key, value)
-                return Jubatus::Common::Datum.new("#{key}" => value )
+
+        def KeyValues(key_values)
+                hash_data = Hash.new()
+                for i in 0 .. key_values.length - 1 do
+                        hash_data["#{key_values[i][0]}"] = key_values[i][1]
+                end
+                return hash_data
         end
 end
+     
