@@ -13,15 +13,11 @@ key_values = [[key1,value1],[key2,value2],...]
 これによってKey-Value形式がわかりやすくなり，見直した時にわかりやすくなる．
 #Methods(Classifire.rb)
 ##Train(label, key_values)
+ここでは，入力するkey_valuesをJubatusのデータ構造に変換し，labelと結びつけて学習（教師あり学習）させるメソッドである．
 
+##Classify(key_values)
+クラスタリングしたいデータ（入力形式に合ったデータ）を送ることによって，
+学習したデータから類似しているラベルと類似スコアを取得する．
 
-学習させるデータ（教師あり学習）を設定する．
-変数valuesは配列なので，labelとkeyを取得すれば一連の流れでセットすることが可能．
-
-Predict(key, values)
-
-データから予測するメソッド．
-こちらもvaluesが配列なので，keyが決まれば一連の流れで処理することが可能．
-
-GetLabel()
+##getLabels()
 全てのラベルを取得する．
